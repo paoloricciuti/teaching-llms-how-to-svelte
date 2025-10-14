@@ -1,12 +1,14 @@
 <script module lang="ts">
 	import { defineProps } from '@animotion/core';
-	import prompt from './prompt.mp4';
+	import { confetti } from '@neoconfetti/svelte';
 
 	let visible = $state(false);
 
 	export const props = defineProps({
 		in() {
-			visible = true;
+			setTimeout(() => {
+				visible = true;
+			}, 500);
 		},
 		out() {
 			visible = false;
@@ -15,6 +17,11 @@
 </script>
 
 {#if visible}
-	<!-- svelte-ignore element_invalid_self_closing_tag -->
-	<video src={prompt} autoplay muted loop class="h-[90vh] w-[90vw] rounded-2xl object-contain" />
+	<div
+		use:confetti={{
+			particleCount: 500,
+			force: 1,
+			stageHeight: 1000
+		}}
+	></div>
 {/if}
