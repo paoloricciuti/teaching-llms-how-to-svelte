@@ -8,6 +8,7 @@
 	import post_6 from './post_6.png';
 	import youtube_1 from './youtube_1.png';
 	import youtube_2 from './youtube_2.png';
+	import reddit_1 from './reddit_1.png';
 </script>
 
 <main class="relative grid h-full w-full place-items-center">
@@ -32,6 +33,9 @@
 	</Transition>
 	<Transition class="absolute -rotate-3">
 		<img src={youtube_2} alt="youtube 2" class="w-[80vw] rounded-2xl" />
+	</Transition>
+	<Transition class="absolute rotate-1">
+		<img src={reddit_1} alt="reddit" class="h-[80vh] rounded-2xl" />
 	</Transition>
 </main>
 
