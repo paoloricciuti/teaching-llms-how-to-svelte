@@ -21,7 +21,6 @@
 			const to = setInterval(() => {
 				if (pre && pre.scrollHeight - pre.scrollTop <= pre.clientHeight + 50) {
 					clearInterval(to);
-					console.log('cleared');
 					return;
 				}
 				pre?.scrollBy({ top: 500, behavior: 'smooth' });

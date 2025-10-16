@@ -55,7 +55,7 @@
 }
 
 /* code block background */
-div:not(.transition):has(> pre) {
+div:not(.transition):not(.highlight-layer):has(> pre) {
 	padding: --spacing(4) --spacing(8);
 	background-color: oklch(24% 0.02 272);
 	border-top: 1px solid oklch(34% 0.02 272);

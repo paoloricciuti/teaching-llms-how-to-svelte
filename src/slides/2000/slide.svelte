@@ -1,14 +1,27 @@
-<script module>
-	import { defineProps, Transition } from '@animotion/core';
-	import think from './thinking.gif';
-	import task_force from './task-force.gif';
+<script module lang="ts">
+	import { defineProps } from '@animotion/core';
+	import { confetti } from '@neoconfetti/svelte';
+
+	let visible = $state(false);
 
 	export const props = defineProps({
-		image: think,
-		class: 'fixed inset-0 grid place-items-center'
+		in() {
+			setTimeout(() => {
+				visible = true;
+			}, 500);
+		},
+		out() {
+			visible = false;
+		}
 	});
 </script>
 
-<Transition>
-	<img src={task_force} alt="task force gif" class="w-[80vw] rotate-3 rounded-2xl" />
-</Transition>
+{#if visible}
+	<div
+		use:confetti={{
+			particleCount: 500,
+			force: 1,
+			stageHeight: 1000
+		}}
+	></div>
+{/if}
