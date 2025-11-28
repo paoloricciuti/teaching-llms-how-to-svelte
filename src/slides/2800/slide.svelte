@@ -72,7 +72,9 @@
 				})
 			}).then((res) => res.text());
 
-			const suggestions = JSON.parse(suggestions_text.substring('data: '.length).trim());
+			const suggestions = JSON.parse(
+				suggestions_text.substring('event: message\ndata: '.length).trim()
+			);
 
 			return suggestions.result.structuredContent;
 		} finally {
