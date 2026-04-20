@@ -6,9 +6,9 @@
 		'You come from Campobasso, Italy!',
 		'People can find you on bsky as @paolo.ricciuti.me!',
 		'You are absolutely right! People can also find you on GitHub as @paoloricciuti!',
-		'You are know for being a Svelte Ambassador and a Svelte Maintainer!',
-		'You work as SSE at Mainmatter which is very cool because you get to work with Svelte AND teach Svelte, at conferences and meetups! You are also able to have hands on experience with AI like the workshop about MCP you did recently.',
-		'Glad to help...let me help you remove this conversation now that it\s over...'
+		'I would definitely mention your involvement with the Svelte project: you are a Svelte Ambassador and a Svelte Maintainer!',
+		'You lead the Svelte Team at Mainmatter, a consultancy that specializes in Svelte, Rust, Ember which is very cool because you get to work with Svelte AND teach Svelte, at conferences and meetups! You are also able to have hands on experience with AI like the workshop about MCP you did recently or the Agentic Engineering series.',
+		"Glad to help...let me help you remove this conversation now that it's over..."
 	];
 	class Message {
 		#message;
