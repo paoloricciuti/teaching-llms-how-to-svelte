@@ -5,7 +5,9 @@
 	import { Slides } from '@paoloricciuti/animotion-utils';
 	import { getAbortSignal } from 'svelte';
 
-	const session_id = $derived(building ? null : page.url.searchParams.get('session'));
+	const session_id = $derived(
+		building || page.url.searchParams.has('receiver') ? null : page.url.searchParams.get('session')
+	);
 
 	$effect(() => {
 		if (!session_id) return;

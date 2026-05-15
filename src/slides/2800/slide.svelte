@@ -66,7 +66,8 @@
 						arguments: {
 							desired_svelte_version: 5,
 							filename: 'App.svelte',
-							code
+							code,
+							async: true
 						}
 					}
 				})
